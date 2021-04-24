@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './TaskStyle.css';
+import PropTypes from 'prop-types';
 
 class TaskComponent extends Component{
 
@@ -14,23 +15,24 @@ class TaskComponent extends Component{
     render(){
         const { task } = this.props;
 
-        return <div style={this.styleCompleted()}>  
-            {task.title} - 
-            {task.description} -
-            {task.done} - 
-            {task.id}
-            <input type="checkbox" />
-            <button>
-                x
-            </button>
-        </div>
+        return  <tr style={this.styleCompleted()}>
+            <td> {task.title} </td> 
+            <td> {task.description} </td> 
+            <td> {task.done} </td>
+            <td> {task.id} </td>
+        </tr>
+        
     }
 }
 
-const styleObject = {
+TaskComponent.propTypes = {
+    task: PropTypes.object.isRequired
+}
+
+/*const styleObject = {
     background: 'yellow',
     color: 'white',
     fontSize: '90px'
-}
+}*/
 
 export default TaskComponent;

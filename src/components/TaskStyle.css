@@ -1,3 +1,20 @@
 .blue{
     background-color: blue;
 }
+table{
+    width: 40%;
+}
+table tr td{
+    border: 1px solid lightgrey;
+    padding: 18px;
+    box-sizing: border-box;
+    background: lightgrey;
+}
+
+table tr th{
+    border: 1px solid #666;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #666;
+    color: #fff;
+}
